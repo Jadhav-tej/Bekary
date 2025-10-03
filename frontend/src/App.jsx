@@ -97,7 +97,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-import "./app.css";
+import "./App.css";
 import { Toaster } from "react-hot-toast";
 import { useSelector } from "react-redux";
 import Navbar from "./Components/Navbar";
