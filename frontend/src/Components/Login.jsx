@@ -226,7 +226,7 @@ function Login() {
 
           {/* Error Message */}
           {errormessage && (
-            <p className="text-red-400 text-center text-sm">{errormessage}</p>
+            <p className="text-red-800 text-center text-sm">{errormessage}</p>
           )}
 
           {/* Submit */}
