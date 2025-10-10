@@ -15,7 +15,7 @@ import connectCloudinary from "./config/cloudinary.js";
 
 dotenv.config();
 const app = express();
-const allowedOrigins=['http://localhost:5173',"https://bekary-fdur.vercel.app/"]
+const allowedOrigins=['http://localhost:5173',"https://bekary-fdur.vercel.app"]
 // Middleware
 app.use(cookieParser())
 app.use(cors({origin: allowedOrigins,credentials:true }));

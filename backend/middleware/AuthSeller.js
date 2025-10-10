@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 
 const AuthSeller = async (req, res, next) => {
   const sellerToken = req.cookies.sellerToken;   
-  console.log("sellerToken", sellerToken);
+  // console.log("sellerToken", sellerToken);
 
   if (!sellerToken) {
     return res.status(401).json({ message: "Not authorized" });
