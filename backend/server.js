@@ -15,7 +15,7 @@ import connectCloudinary from "./config/cloudinary.js";
 
 dotenv.config();
 const app = express();
-const allowedOrigins=['http://localhost:5173']
+const allowedOrigins=['http://localhost:5173',"https://bekary-fdur.vercel.app/"]
 // Middleware
 app.use(cookieParser())
 app.use(cors({origin: allowedOrigins,credentials:true }));
@@ -28,9 +28,6 @@ app.use("/api/products", productRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/address", addressRoutes);
 app.use("/api/order", orderRouter);
-
-
-
 
 
 
@@ -48,3 +45,4 @@ app.get("/", (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+

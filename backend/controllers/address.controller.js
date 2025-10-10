@@ -7,7 +7,7 @@ export const  addAddres=async(req,res)=>{
         await Address.create({...address,userId})
         res.status(200).json({message:"address added"})
     } catch (error) {
-            console.log(error.message)
+            // console.log(error.message)
             res.status(401).json({message:error.message})
     }
 }

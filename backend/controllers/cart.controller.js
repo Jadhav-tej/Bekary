@@ -7,7 +7,7 @@ export const updateCart =async(req,res)=>{
         res.status(200).json({message:"cart Updated"})
         
     } catch (error) {
-        console.log(error.message)
+        // console.log(error.message)
         res.status(401).json({message:error.message})
     }
 }

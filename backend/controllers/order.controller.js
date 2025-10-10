@@ -88,13 +88,13 @@ export const placeOrderCOD = async (req, res) => {
 export const getUserOrders = async (req, res) => {
   try {
     const userId = req.userId;
-    console.log("userid from frontend",userId)
+    // console.log("userid from frontend",userId)
     if (!userId) return res.status(400).json({ message: "User ID required" });
     const orders = await Order.find({userId}).populate("item.product").sort({ createdAt:-1 });
-    console.log("orders from getorder",orders)
+    // console.log("orders from getorder",orders)
     res.status(200).json(orders);
   } catch (error) {
-    console.log(error.message)
+    // console.log(error.message)
     res.status(401).json({ message: error.message });
   }
 };
@@ -136,7 +136,7 @@ export const getAllOrders = async (req, res) => {
       // .populate({ path: "item.product", select: "name offerPrice image", strictPopulate: false })
       .sort({ createdAt: -1 });
 
-    console.log("Fetched orders:", orders);
+    // console.log("Fetched orders:", orders);
     res.status(200).json(orders);
   } catch (err) {
     console.error("Error fetching orders:", err);
