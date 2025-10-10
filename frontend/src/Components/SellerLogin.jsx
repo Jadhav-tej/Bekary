@@ -28,7 +28,8 @@ function SellerLogin() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/seller/login",
+        // "http://localhost:5000/api/seller/login",
+        `${process.env.REACT_APP_API_URL}/api/seller/login`,
         formData,
         { withCredentials: true }
       );
@@ -49,7 +50,10 @@ function SellerLogin() {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-       const res = await axios.get("http://localhost:5000/api/seller/is-auth", {
+       const res = await axios.get(
+        // "http://localhost:5000/api/seller/is-auth",
+        `${process.env.REACT_APP_API_URL}/api/seller/is-auth`,
+         {
            withCredentials: true,
          });
 

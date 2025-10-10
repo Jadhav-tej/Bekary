@@ -6,7 +6,7 @@ export const sellerlogin = async (req, res) => {
     const envpass =process.env.ADMIN_PASS
     const envemail=process.env.ADMIN_EMAIL
 
-    console.log(envemail,envpass)
+    // console.log(envemail,envpass)
     if (
       password === process.env.ADMIN_PASS &&
       email === process.env.ADMIN_EMAIL
@@ -17,7 +17,7 @@ export const sellerlogin = async (req, res) => {
         expiresIn: "7d",
       });
 
-      console.log("token",token)
+      // console.log("token",token)
       // res.cookie("sellerToken", token, {
       //   httpOnly: true,
       //   secure: process.env.NODE_ENV === "production",

@@ -9,7 +9,7 @@ function MyOrder() {
   const dispatch = useDispatch();
   const { userOrders , loading } = useSelector((state) => state.order);
   const { user } = useSelector((state) => state.auth);
-console.log("orders",userOrders)
+// console.log("orders",userOrders)
   useEffect(() => {
     if (user) {
       dispatch(fetchUserOrders());

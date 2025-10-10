@@ -38,7 +38,10 @@ export const fetchProducts = createAsyncThunk(
   "product/fetchProducts",
   async (_, thunkAPI) => {
     try {
-      const res = await axios.get("http://localhost:5000/api/products/list", {
+      const res = await axios.get(
+        // "http://localhost:5000/api/products/list",
+        `${process.env.REACT_APP_API_URL}api/products/list`,
+         {
         withCredentials: true,
       });
       return res.data;
@@ -53,7 +56,10 @@ export const deleteProduct = createAsyncThunk(
   "product/deleteProduct",
   async (productId, thunkAPI) => {
     try {
-      await axios.delete(`http://localhost:5000/api/products/${productId}`, {
+      await axios.delete(
+        // `http://localhost:5000/api/products/${productId}`,
+        `${process.env.REACT_APP_API_URL}/api/products/${productId}`,
+         {
         withCredentials: true,
       });
       return productId;
@@ -69,7 +75,8 @@ export const updateProduct = createAsyncThunk(
   async ({ productId, productData }, thunkAPI) => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/products/${productId}`,
+        // `http://localhost:5000/api/products/${productId}`,
+        `${process.env.REACT_APP_API_URL}/api/products/${productId}`,
         productData,
         { withCredentials: true }
       );

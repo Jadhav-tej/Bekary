@@ -186,7 +186,10 @@ function ShopPage() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/products/list", {
+        const res = await axios.get(
+          // "http://localhost:5000/api/products/list", 
+          `${process.env.REACT_APP_API_URL}/api/products/list`,
+          {
           withCredentials: true,
         });
         dispatch(setProducts(res.data));

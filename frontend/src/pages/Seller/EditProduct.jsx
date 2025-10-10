@@ -72,7 +72,10 @@ function EditProduct() {
     if (imageFile) data.append("image", imageFile);
 
      try {
-    await axios.put(`http://localhost:5000/api/products/edit/${id}`, data, {
+    await axios.put(
+      // `http://localhost:5000/api/products/edit/${id}`, 
+      `${process.env.REACT_APP_API_URL}/api/products/edit/${id}`,
+      data, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
