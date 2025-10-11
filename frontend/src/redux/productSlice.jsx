@@ -44,6 +44,7 @@ export const fetchProducts = createAsyncThunk(
          {
         withCredentials: true,
       });
+      console.log("response=---->",res)
       return res.data;
     } catch (err) {
       return thunkAPI.rejectWithValue(err.response?.data?.message || err.message);

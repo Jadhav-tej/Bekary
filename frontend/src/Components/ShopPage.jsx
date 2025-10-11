@@ -22,7 +22,7 @@ function ShopPage() {
       try {
         const res = await axios.get(
           // "http://localhost:5000/api/products/list", 
-          `${import.meta.env.VITE_API_URL}/api/products/list`,
+          `${import.meta.env.VITE_API_URL}api/products/list`,
           {
           withCredentials: true,
         });

@@ -74,7 +74,7 @@ function EditProduct() {
      try {
     await axios.put(
       // `http://localhost:5000/api/products/edit/${id}`, 
-      `${import.meta.env.VITE_API_URL}/api/products/edit/${id}`,
+      `${import.meta.env.VITE_API_URL}api/products/edit/${id}`,
       data, {
       headers: {
         "Content-Type": "multipart/form-data",

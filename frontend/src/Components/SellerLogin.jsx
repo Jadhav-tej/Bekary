@@ -29,7 +29,7 @@ function SellerLogin() {
     try {
       const res = await axios.post(
         // "http://localhost:5000/api/seller/login",
-        `${import.meta.env.VITE_API_URL}/api/seller/login`,
+        `${import.meta.env.VITE_API_URL}api/seller/login`,
         formData,
         { withCredentials: true }
       );

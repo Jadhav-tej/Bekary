@@ -8,7 +8,7 @@ export const fetchSellerOrders = createAsyncThunk(
     try {
       const res = await axios.get(
         // "http://localhost:5000/api/order/seller/orders", 
-        `${import.meta.env.VITE_API_URL}/api/order/seller/orders`,
+        `${import.meta.env.VITE_API_URL}api/order/seller/orders`,
         {
         withCredentials: true,  
       });
@@ -60,9 +60,10 @@ export const fetchUserOrders = createAsyncThunk(
   "order/fetchUserOrders",
   async (_,thunkAPI) => {
     try {
+      {console.log("import.meta.env.VITE_API_URL--->",import.meta.env.VITE_API_URL)}
       const res = await axios.post(
-        "http://localhost:5000/api/order/user",
-        // `${import.meta.env.VITE_API_URL}/api/order/user`,
+        // "http://localhost:5000/api/order/user",
+        `${import.meta.env.VITE_API_URL}api/order/user`,
         {},{withCredentials:true});
       return res.data;
       

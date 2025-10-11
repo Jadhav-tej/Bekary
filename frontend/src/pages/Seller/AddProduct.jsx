@@ -40,7 +40,7 @@ function AddProduct() {
 
       const res = await axios.post(
         // "http://localhost:5000/api/products/add",
-        `${import.meta.env.VITE_API_URL}/api/products/add`, 
+        `${import.meta.env.VITE_API_URL}api/products/add`, 
         data, {
         headers: {
           "Content-Type": "multipart/form-data",
