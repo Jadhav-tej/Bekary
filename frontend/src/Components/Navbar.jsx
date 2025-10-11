@@ -247,8 +247,8 @@ const Navbar = () => {
   async function handleLogout() {
     try {
       await axios.post(
-        // "http://localhost:5000/api/users/logout",
-        `${process.env.REACT_APP_API_URL}/api/users/logout`,  
+        "http://localhost:5000/api/users/logout",
+        // `${process.env.REACT_APP_API_URL}/api/users/logout`,  
          {}, { withCredentials: true });
       dispatch(setUser(false));
       dispatch(setIsSeller(false));

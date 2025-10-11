@@ -254,8 +254,8 @@ const navigate=useNavigate()
 
       // call backend API
       const res = await axios.post(
-        // "http://localhost:5000/api/order/cod",
-        `${process.env.REACT_APP_API_URL}/api/order/cod`,
+        "http://localhost:5000/api/order/cod",
+        // `${process.env.REACT_APP_API_URL}/api/order/cod`,
         orderData,
         { withCredentials: true } // needed if AuthUser middleware checks cookies
       );

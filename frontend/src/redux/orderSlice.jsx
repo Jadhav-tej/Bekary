@@ -7,8 +7,8 @@ export const fetchSellerOrders = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const res = await axios.get(
-        // "http://localhost:5000/api/order/seller/orders", 
-        `${process.env.REACT_APP_API_URL}/api/order/seller/orders`,
+        "http://localhost:5000/api/order/seller/orders", 
+        // `${process.env.REACT_APP_API_URL}/api/order/seller/orders`,
         {
         withCredentials: true,  
       });
@@ -24,8 +24,8 @@ export const updateOrderStatus = createAsyncThunk(
   async ({orderId,status }, thunkAPI) => {
     try {
       const res = await axios.patch(
-        // `http://localhost:5000/api/order/seller/orders/${orderId}`,
-        `${process.env.REACT_APP_API_URL}/api/order/seller/orders/${orderId}`,
+        `http://localhost:5000/api/order/seller/orders/${orderId}`,
+        // `${process.env.REACT_APP_API_URL}/api/order/seller/orders/${orderId}`,
         { status },
         { withCredentials: true }
       );
@@ -41,8 +41,8 @@ export const placeOrder = createAsyncThunk(
   async (orderData, thunkAPI) => {
     try {
       const res = await axios.post(
-        // "http://localhost:5000/api/order/cod",
-        `${process.env.REACT_APP_API_URL}/api/order/cod`,
+        "http://localhost:5000/api/order/cod",
+        // `${process.env.REACT_APP_API_URL}/api/order/cod`,
          orderData,
         { withCredentials: true
 
@@ -61,8 +61,8 @@ export const fetchUserOrders = createAsyncThunk(
   async (_,thunkAPI) => {
     try {
       const res = await axios.post(
-        // "http://localhost:5000/api/order/user",
-        `${process.env.REACT_APP_API_URL}/api/order/user`,
+        "http://localhost:5000/api/order/user",
+        // `${process.env.REACT_APP_API_URL}/api/order/user`,
         {},{withCredentials:true});
       return res.data;
       

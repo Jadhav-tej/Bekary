@@ -21,8 +21,8 @@ function ShopPage() {
     const fetchProducts = async () => {
       try {
         const res = await axios.get(
-          // "http://localhost:5000/api/products/list", 
-          `${process.env.REACT_APP_API_URL}/api/products/list`,
+          "http://localhost:5000/api/products/list", 
+          // `${process.env.REACT_APP_API_URL}/api/products/list`,
           {
           withCredentials: true,
         });

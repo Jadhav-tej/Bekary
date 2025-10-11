@@ -143,8 +143,8 @@ const SellerDash = () => {
   async function handleLogout() {
   try {
     const { data } = await axios.post(
-      // "http://localhost:5000/api/seller/logout",
-      `${process.env.REACT_APP_API_URL}api/seller/logout`,
+      "http://localhost:5000/api/seller/logout",
+      // `${process.env.REACT_APP_API_URL}api/seller/logout`,
       {}, 
       { withCredentials: true } 
     );
