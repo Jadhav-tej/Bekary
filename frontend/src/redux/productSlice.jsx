@@ -39,8 +39,8 @@ export const fetchProducts = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/products/list",
-        // `${process.env.REACT_APP_API_URL}api/products/list`,
+        // "http://localhost:5000/api/products/list",
+        `${import.meta.env.VITE_API_URL}api/products/list`,
          {
         withCredentials: true,
       });
@@ -58,7 +58,7 @@ export const deleteProduct = createAsyncThunk(
     try {
       await axios.delete(
         `http://localhost:5000/api/products/${productId}`,
-        // `${process.env.REACT_APP_API_URL}/api/products/${productId}`,
+        // `${import.meta.env.VITE_API_URL}/api/products/${productId}`,
          {
         withCredentials: true,
       });
@@ -76,7 +76,7 @@ export const updateProduct = createAsyncThunk(
     try {
       const res = await axios.put(
         `http://localhost:5000/api/products/${productId}`,
-        // `${process.env.REACT_APP_API_URL}/api/products/${productId}`,
+        // `${import.meta.env.VITE_API_URL}/api/products/${productId}`,
         productData,
         { withCredentials: true }
       );

@@ -7,8 +7,8 @@ export const fetchSellerOrders = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/order/seller/orders", 
-        // `${process.env.REACT_APP_API_URL}/api/order/seller/orders`,
+        // "http://localhost:5000/api/order/seller/orders", 
+        `${import.meta.env.VITE_API_URL}/api/order/seller/orders`,
         {
         withCredentials: true,  
       });
@@ -25,7 +25,7 @@ export const updateOrderStatus = createAsyncThunk(
     try {
       const res = await axios.patch(
         `http://localhost:5000/api/order/seller/orders/${orderId}`,
-        // `${process.env.REACT_APP_API_URL}/api/order/seller/orders/${orderId}`,
+        // `${import.meta.env.VITE_API_URL}/api/order/seller/orders/${orderId}`,
         { status },
         { withCredentials: true }
       );
@@ -42,7 +42,7 @@ export const placeOrder = createAsyncThunk(
     try {
       const res = await axios.post(
         "http://localhost:5000/api/order/cod",
-        // `${process.env.REACT_APP_API_URL}/api/order/cod`,
+        // `${import.meta.env.VITE_API_URL}/api/order/cod`,
          orderData,
         { withCredentials: true
 
@@ -62,7 +62,7 @@ export const fetchUserOrders = createAsyncThunk(
     try {
       const res = await axios.post(
         "http://localhost:5000/api/order/user",
-        // `${process.env.REACT_APP_API_URL}/api/order/user`,
+        // `${import.meta.env.VITE_API_URL}/api/order/user`,
         {},{withCredentials:true});
       return res.data;
       

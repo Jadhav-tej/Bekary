@@ -39,8 +39,8 @@ function AddProduct() {
       data.append("offerPrice", formData.offerPrice);
 
       const res = await axios.post(
-        "http://localhost:5000/api/products/add",
-        // `${process.env.REACT_APP_API_URL}/api/products/add`, 
+        // "http://localhost:5000/api/products/add",
+        `${import.meta.env.VITE_API_URL}/api/products/add`, 
         data, {
         headers: {
           "Content-Type": "multipart/form-data",
